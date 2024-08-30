@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submit Lab Result</title>
+</head>
+<body>
+    <h2>Submit Lab Result for Patient: {{ patient.firstname }} {{ patient.surname }}</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Test</button>
+        <button type="submit" name="save_exit">Save and Exit</button> <!-- Button to save and exit -->
+    </form>
+</body>
+</html>
